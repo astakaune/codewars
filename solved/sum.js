@@ -1,5 +1,17 @@
+function sum(a, b) {
+    if (typeof a !== 'number' ||
+        typeof b !== 'number' ||
+        // a === Infinity ||
+        // a === -Infinity ||
+        // isNaN(a) ||
+        !isFinite(a) ||
+        !isFinite(b)) {
+        return 'Error';
+    }
+    return a + b;
+};
 
-const sum = require('./sum.js');
+
 
 test('adds 1 + 2 to equal 3', () => {
     expect(sum(1, 2)).toBe(3);
